@@ -43,7 +43,7 @@ pipeline {
 
                 sh '''
                 scp -o StrictHostKeyChecking=no -r ./ ubuntu@13.51.177.176:/var/www/myapp
-                ssh ubuntu@13.233.83.134 'pm2 restart myapp || pm2 start /var/www/myapp/index.js --name myapp'
+                ssh ubuntu@13.51.177.176 'pm2 restart myapp || pm2 start /var/www/myapp/index.js --name myapp'
                 '''
             }
         }
